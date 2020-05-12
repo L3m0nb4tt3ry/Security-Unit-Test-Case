@@ -25,6 +25,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install --save-dev mocha chai
+    - run: npm install --save-dev eslint-plugin-security-node
     - run: npm install --package-lock
     - run: npm ci
     - run: npm run build --if-present
